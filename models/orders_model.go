@@ -6,11 +6,11 @@ import (
 
 type Order struct {
 	gorm.Model
-	OrderId         int    `json:"orderId"`
-	CarId           string `json:"carId"`
-	OrderDate       int    `json:"orderDate"`
-	PickupDate      int    `json:"pickupDate"`
-	DropoffDate     string `json:"dropoffDate"`
-	PickupLocation  string `json:"pickupLocation"`
-	DropoffLocation string `json:"dropoffLocation"`
+	OrderId         uint   `json:"order_id"`
+	CarId           int    `json:"car_id"`
+	OrderDate       string `json:"order_date"`
+	PickupDate      string `json:"pickup_date"`
+	DropoffDate     string `json:"dropoff_date"`
+	PickupLocation  string `json:"pickup_location"`
+	DropoffLocation string `json:"dropoff_location"`
 }

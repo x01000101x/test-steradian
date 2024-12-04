@@ -16,6 +16,7 @@ func main() {
 	//Router
 	r := gin.Default()
 
+	//CARS
 	//GET
 	r.GET("/cars", controllers.GetCars)
 	//CREATE
@@ -24,6 +25,16 @@ func main() {
 	r.PUT("/cars/:car_id", controllers.UpdateCars)
 	//DELETE
 	r.DELETE("/cars/:car_id", controllers.DeleteCars)
+
+	//ORDERS
+	//GET
+	r.GET("/orders", controllers.GetOrders)
+	//CREATE
+	r.POST("/orders", controllers.CreateOrders)
+	//UPDATE
+	r.PUT("/orders/:order_id", controllers.UpdateOrders)
+	//DELETE
+	r.DELETE("/orders/:order_id", controllers.DeleteOrders)
 
 	//Server Start
 	r.Run(":8080")
